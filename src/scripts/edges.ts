@@ -201,9 +201,16 @@ export function drawEdges(): void {
     }
   );
 
+  // On mobile, push the btc→ln label down to avoid colliding with the LN node CTA.
+  // The CTA sits at lnPx.y+30 and the shelf-placer puts this label at lnPx.y+~43,
+  // leaving a near-zero gap on small screens.
+  if (isMobile) {
+    const btcLnItem = items.find((it) => it.e.from === 'btc' && it.e.to === 'ln');
+    if (btcLnItem && btcLnItem.labelY !== undefined) btcLnItem.labelY += 32;
+  }
+
   items.forEach((it) => {
     if (it.g) it.g.setAttribute('transform', `translate(${it.labelX},${it.labelY})`);
   });
-
   syncHighlight(null);
 }
