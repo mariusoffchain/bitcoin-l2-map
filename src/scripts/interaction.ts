@@ -2,6 +2,7 @@
 
 import { CATEGORIES, EDGES, NODES, state } from './data';
 import { app, edgesSvg, nodesLayer, panel, stage } from './dom';
+import { notifyPanelOpen } from './iframe';
 import { showPanelDetail } from './panel';
 
 // ── Mobile CTA (tap-to-focus, tap CTA to open panel) ────────────────────────
