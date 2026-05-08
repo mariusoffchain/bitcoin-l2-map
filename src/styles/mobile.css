@@ -48,9 +48,15 @@
     border-left: none;
     border-top: none;
     display: flex;
-    overflow-y: auto;
+    overflow: hidden;
   }
 
+  /* Scroll lives here, not on .panel — keeps the close button out of the scroll flow */
+  .panel-inner {
+    flex: 1;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
   .panel.panel-open {
     transform: translateX(0);
   }
@@ -87,9 +93,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: sticky;
-    top: 0;
-    left: 0;
     z-index: 10;
     width: 44px;
     height: 44px;
@@ -101,8 +104,9 @@
     font-size: 18px;
     cursor: pointer;
     flex-shrink: 0;
+    align-self: flex-start;
   }
-
+  
   .panel-close:hover {
     background: var(--line-strong);
   }
