@@ -50,7 +50,7 @@ function showCta(id: string): void {
   btn.style.setProperty('--cta-color', color);
   btn.style.left = px.x + 'px';
   btn.style.top  = ctaY + 'px';
-  requestAnimationFrame(() => btn.classList.add('visible'));
+  btn.classList.add('visible');
 }
 
 function hideCta(): void {
@@ -153,9 +153,12 @@ export function attachInteractions(): void {
     const id = el.dataset.id;
     if (!id) return;
 
-    // Desktop: hover highlights edges and pre-fills panel
-    el.addEventListener('mouseenter', () => hoverNode(id));
-    el.addEventListener('mouseleave', () => hoverNode(null));
+        // Desktop only: hover highlights edges and pre-fills panel.
+    // mouseenter/mouseleave are suppressed on mobile because iOS WebKit fires
+    // them as synthetic mouse events before the click, causing a false "tap 1"
+    // that shows connections without the CTA, making it feel like 3 taps.
+    el.addEventListener('mouseenter', () => { if (!isMobile()) hoverNode(id); });
+    el.addEventListener('mouseleave', () => { if (!isMobile()) hoverNode(null); });
 
     el.addEventListener('click', (e) => {
       if (!isMobile()) {
