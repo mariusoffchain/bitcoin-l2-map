@@ -22,6 +22,7 @@ function getCtaEl(): HTMLButtonElement {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       panel.classList.add('panel-open');
+      notifyPanelOpen();
       hideCta();
     });
     stage.appendChild(btn);
@@ -172,6 +173,7 @@ export function attachInteractions(): void {
       e.stopPropagation();
       if (state.active === id) {
         panel.classList.add('panel-open');
+        notifyPanelOpen();
         return;
       }
       hideCta();
