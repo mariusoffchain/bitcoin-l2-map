@@ -19,7 +19,7 @@ function stackPositions(stageWidth: number): Record<string, { x: number; y: numb
   pos.btc = { x: 0.50, y: ty.node[3] };
   pos.ln  = { x: 0.50, y: ty.node[2] };
 
-  const tier15Order = ['ark', 'spark', 'rgb', 'bitvm', 'ordinals'];
+  const tier15Order = ['ark', 'spark', 'bitvm', 'rgb', 'ordinals'];
   const tier15 = tier15Order.filter((id) => NODES.find((n) => n.id === id));
   tier15.forEach((id, i) => {
     pos[id] = { x: colX(i, tier15.length), y: ty.node[1] };
