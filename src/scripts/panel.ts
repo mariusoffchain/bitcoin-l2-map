@@ -12,5 +12,5 @@ export function showPanelDetail(id: string | null): void {
     el.hidden = el.dataset.id !== id;
   });
   empty.hidden = !!id;
-  panelInner.scrollTop = 0;
+  panel.scrollTop = 0;
 }
