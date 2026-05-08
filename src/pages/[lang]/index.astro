@@ -1,0 +1,63 @@
+---
+import en from '../../i18n/en.json';
+import fr from '../../i18n/fr.json';
+import nodesEn from '../../content/nodes.en.json';
+import nodesFr from '../../content/nodes.fr.json';
+
+import Header from '../../components/Header.astro';
+import Stage from '../../components/Stage.astro';
+import Panel from '../../components/Panel.astro';
+import InfoBar from '../../components/InfoBar.astro';
+import Tweaks from '../../components/Tweaks.astro';
+
+import type { NodeContent, Strings } from '../../types';
+import '../../styles/index.css';
+
+type Lang = 'en' | 'fr';
+
+const LOCALES: Record<Lang, { t: Strings; nodesContent: NodeContent[] }> = {
+  en: { t: en as Strings, nodesContent: nodesEn as NodeContent[] },
+  fr: { t: fr as Strings, nodesContent: nodesFr as NodeContent[] },
+};
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'fr' } },
+  ];
+}
+
+const lang = Astro.params.lang as Lang;
+const { t, nodesContent } = LOCALES[lang];
+---
+<!doctype html>
+<html lang={t.lang}>
+  <head>
+    <meta charset="utf-8" />
+    <title>{t.pageTitle}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app mode-stack" id="app">
+      <Header t={t} />
+      <Stage t={t} nodesContent={nodesContent} />
+      <Panel t={t} nodesContent={nodesContent} />
+      <Tweaks t={t} />
+      <InfoBar t={t} />
+    </div>
+
+    <script is:inline define:vars={{ t, nodesContent }}>
+      window.__APP_DATA__ = { t, nodesContent };
+    </script>
+
+    <script>
+      import '../../scripts/main';
+    </script>
+  </body>
+</html>

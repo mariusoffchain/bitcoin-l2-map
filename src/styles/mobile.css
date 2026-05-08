@@ -1,0 +1,204 @@
+/* Mobile-only overrides (max-width: 768px) */
+/* Scrollbar */
+.panel::-webkit-scrollbar { width: 8px; }
+.panel::-webkit-scrollbar-track { background: var(--bg); }
+.panel::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 4px; }
+
+/* ---- PANEL CLOSE BUTTON (hidden on desktop) ---- */
+.panel-close {
+  display: none;
+}
+
+/* ---- NODE CTA (mobile tap-to-explore button, hidden on desktop) ---- */
+.node-cta {
+  display: none;
+}
+
+/* ---- MOBILE ---- */
+@media (max-width: 768px) {
+  /* Page scrolls naturally — override desktop height:100%+overflow:hidden from vars.css */
+  html,
+  body {
+    height: auto;
+    min-height: 100%;
+    overflow-y: auto;
+  }
+
+  .app {
+    position: relative;
+    inset: auto;
+    height: auto;
+    min-height: 100svh;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto minmax(640px, 1fr);
+    grid-template-areas:
+      "header"
+      "info-bar"
+      "stage";
+  }
+
+  .panel {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    transform: translateX(100%);
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+    border-left: none;
+    border-top: none;
+    display: flex;
+    overflow-y: auto;
+  }
+
+  .panel.panel-open {
+    transform: translateX(0);
+  }
+
+  .panel .tagline {
+    font-size: 17px;
+  }
+
+  .panel p.body,
+  .empty p {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .panel p.body::first-letter {
+    float: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+    color: inherit;
+  }
+
+  .specs dd {
+    font-size: 16px;
+  }
+
+  .specs dd.mono {
+    font-size: 14px;
+  }
+
+  .panel-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 44px;
+    height: 44px;
+    margin: 12px 0 0 12px;
+    background: var(--bg);
+    border: 1px solid var(--line-strong);
+    border-radius: 50%;
+    color: var(--fg);
+    font-size: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .panel-close:hover {
+    background: var(--line-strong);
+  }
+
+  /* Stratum labels → top-left of each section on mobile */
+  .stratum::before {
+    left: 0;
+    right: 0;
+  }
+
+  .stratum-rail {
+    top: 0;
+    left: 12px;
+    right: auto;
+    width: auto;
+    bottom: auto;
+    justify-content: flex-start;
+  }
+
+  .stratum-rail .tier-name {
+    white-space: nowrap !important;
+    font-size: 9.5px;
+    letter-spacing: 0.14em;
+    padding: 3px 8px;
+  }
+
+  .stratum-rail br {
+    display: none;
+  }
+
+  /* Smaller nodes on mobile */
+  .node-core {
+    width: 52px;
+    height: 52px;
+    font-size: 18px;
+  }
+
+  .app.mode-stack .node:not(.btc):not(.ln) .node-core {
+    width: 44px;
+    height: 44px;
+  }
+
+  .node-label {
+    font-size: 10px;
+    top: calc(100% + 8px);
+  }
+
+  /* info-bar: collapsible tab strip above the stage */
+  .info-bar {
+    display: flex;
+  }
+
+  /* Reduce slab heights on mobile (44px vs 56px desktop) */
+  .app.mode-stack .node.btc .node-core,
+  .app.mode-stack .node.ln .node-core {
+    height: 44px;
+  }
+
+  /* Header: break subtitle onto its own line, smaller */
+  h1 {
+    font-size: 26px;
+  }
+
+  h1 em {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    margin-top: 2px;
+  }
+
+  /* Node CTA: appears below a tapped node, coloured per category */
+  .node-cta {
+    display: block;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 50;
+    padding: 5px 12px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: var(--cta-color, var(--fg));
+    border: none;
+    color: var(--bg);
+    border-radius: 2px;
+    cursor: pointer;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+  }
+
+  .node-cta.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Strata mobile positions are set by JS (see TIERS + layoutAll) */
+}
