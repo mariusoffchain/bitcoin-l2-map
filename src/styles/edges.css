@@ -21,3 +21,7 @@
   transition: opacity 200ms ease;
 }
 .app.has-active .edge-label.highlighted { opacity: 1; fill: var(--cat, var(--fg-dim)); }
+
+@media (prefers-color-scheme: light) {
+  .app.has-active .edge-label.ln.highlighted { fill: #e8bc00; }
+}
