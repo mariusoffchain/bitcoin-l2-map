@@ -68,6 +68,7 @@ export interface Strings {
   l1Tag: string;
   tierLabels: Record<string, string>;
   categories: Record<CategoryKey, string>;
+  edges: Record<string, string>;
 }
 
 export interface NodeContent {
