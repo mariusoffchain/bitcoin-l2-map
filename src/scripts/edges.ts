@@ -114,8 +114,8 @@ export function drawEdges(): void {
   items.forEach((it) => {
     const { e, edgeColor, p1, p2 } = it;
     const tg = document.createElementNS(SVG_NS, 'g');
-    tg.setAttribute('class', 'edge-label' + (e.secondary ? ' secondary' : ''));
-    tg.dataset.from = e.from;
+    const isLn = e.from === 'ln' || e.to === 'ln';
+    tg.setAttribute('class', 'edge-label' + (e.secondary ? ' secondary' : '') + (isLn ? ' ln' : ''));    tg.dataset.from = e.from;
     tg.dataset.to   = e.to;
     tg.style.setProperty('--cat', edgeColor);
     const txt = document.createElementNS(SVG_NS, 'text');
