@@ -2,7 +2,7 @@
   "lang": "en",
   "title": "A Map of Bitcoin",
   "titleEm": "and its scaling layers",
-  "pageTitle": "A Map of Bitcoin — Off-Chain Media",
+  "pageTitle": "A Map of Bitcoin - Off-Chain Media",
   "closeLabel": "Close",
   "settingsBtn": "Tweaks ◹",
   "settingsTitle": "Tweaks",
@@ -39,5 +39,21 @@
     "client":      "Client-side Validation",
     "ecash":       "Chaumian Mint / E-Cash",
     "inscription": "On-chain Inscription"
+  },
+  "edges": {
+    "btc_ln":       "HTLC channel peg",
+    "btc_ark":      "Shared UTXO round",
+    "btc_spark":    "Shared private key",
+    "btc_rgb":      "Single-use seal",
+    "btc_bitvm":    "Script primitive",
+    "btc_liquid":   "Federated peg (11/15)",
+    "btc_rsk":      "PowPeg · merge-mined",
+    "btc_citrea":   "BitVM bridge",
+    "btc_fedi":     "Federated multisig",
+    "btc_ordinals": "Embedded witness data",
+    "ln_swap":      "Lightning Swap",
+    "ln_rgb":       "Carries RGB assets",
+    "ln_fedi":      "Lightning gateway",
+    "bitvm_citrea": "Verifies rollup state"
   }
 }
