@@ -28,7 +28,6 @@ export function renderBtcSlab(width: number, height = 56): string {
 }
 
 export function renderLnMesh(width: number, height = 56): string {
-  const c = 'oklch(0.82 0.17 95)';
   const halfPeriod = 34;
   const padX = 20;
   const cy = height / 2;
@@ -65,11 +64,10 @@ export function renderLnMesh(width: number, height = 56): string {
   let svg = `<svg width="100%" height="${height}" viewBox="0 0 ${width} ${height}" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">`;
   channels.forEach(([a, b]) => {
     const na = lnNodes[a], nb = lnNodes[b];
-    svg += `<line x1="${na.x}" y1="${na.y}" x2="${nb.x}" y2="${nb.y}" stroke="${c}" stroke-opacity="0.30" stroke-width="0.8"/>`;
+    svg += `<line x1="${na.x}" y1="${na.y}" x2="${nb.x}" y2="${nb.y}" stroke="currentColor" stroke-opacity="0.40" stroke-width="0.8"/>`;
   });
   lnNodes.forEach((nd) => {
-    svg += `<circle cx="${nd.x}" cy="${nd.y}" r="3.5" fill="hsla(210,70%,60%,0.15)" stroke="${c}" stroke-opacity="0.85" stroke-width="1"/>`;
-  });
+    svg += `<circle cx="${nd.x}" cy="${nd.y}" r="3.5" fill="currentColor" fill-opacity="0.10" stroke="currentColor" stroke-opacity="0.85" stroke-width="1"/>`;  });
   svg += `</svg>`;
   return svg;
 }
