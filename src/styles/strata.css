@@ -103,8 +103,9 @@
   width: calc(var(--stage-w, 600px) * 0.65);
   height: 56px;
   border-radius: 2px;
-  background: light-dark(color-mix(in oklab, var(--cat-lightning) 14%, var(--bg)), color-mix(in oklab, var(--cat-lightning) 3%, var(--bg)));
-  border: 1px solid light-dark(color-mix(in oklab, var(--cat-lightning) 70%, transparent), color-mix(in oklab, var(--cat-lightning) 40%, transparent));
+  background: light-dark(#fff9d6, color-mix(in oklab, var(--cat-lightning) 3%, var(--bg)));
+  border: 1px solid light-dark(color-mix(in oklab, #ffd400 60%, transparent), color-mix(in oklab, var(--cat-lightning) 40%, transparent));
+  color: light-dark(#ffd400, oklch(0.82 0.17 95));
   box-shadow: none;
   overflow: hidden;
   padding: 0;
