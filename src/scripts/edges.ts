@@ -1,6 +1,6 @@
 // SVG edge drawing — paths between nodes, plus shelf-placed edge labels.
 
-import { CATEGORIES, EDGES, NODES, TIER_Y, state } from './data';
+import { CATEGORIES, EDGES, NODES, S, TIER_Y, state } from './data';
 import { edgesSvg, stage } from './dom';
 import { syncHighlight } from './interaction';
 import type { Edge } from '../types';
@@ -119,7 +119,7 @@ export function drawEdges(): void {
     tg.dataset.to   = e.to;
     tg.style.setProperty('--cat', edgeColor);
     const txt = document.createElementNS(SVG_NS, 'text');
-    txt.textContent = e.kind;
+    txt.textContent = S.edges[e.kind] ?? e.kind;
     txt.setAttribute('x', '0'); txt.setAttribute('y', '0');
     txt.setAttribute('text-anchor', 'middle');
     txt.setAttribute('dy', '0.35em');
