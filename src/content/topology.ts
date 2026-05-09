@@ -28,27 +28,27 @@ export const CATEGORY_CSS: Record<CategoryKey, string> = {
 
 export const EDGES: Edge[] = [
   // L1 → L1.5
-  { from: 'btc', to: 'ln',       kind: 'HTLC channel peg',      style: 'solid' },
-  { from: 'btc', to: 'ark',      kind: 'Shared UTXO round',     style: 'solid' },
-  { from: 'btc', to: 'spark',    kind: 'Shared private key',  style: 'solid' },
-  { from: 'btc', to: 'rgb',      kind: 'Single-use seal',       style: 'solid' },
-  { from: 'btc', to: 'bitvm',    kind: 'Script primitive',      style: 'cryptographic' },
+  { from: 'btc', to: 'ln',       kind: 'btc_ln',       style: 'solid' },
+  { from: 'btc', to: 'ark',      kind: 'btc_ark',      style: 'solid' },
+  { from: 'btc', to: 'spark',    kind: 'btc_spark',    style: 'solid' },
+  { from: 'btc', to: 'rgb',      kind: 'btc_rgb',      style: 'solid' },
+  { from: 'btc', to: 'bitvm',    kind: 'btc_bitvm',    style: 'cryptographic' },
   // L1 → L2
-  { from: 'btc', to: 'liquid',   kind: 'Federated peg (11/15)', style: 'dashed' },
-  { from: 'btc', to: 'rsk',      kind: 'PowPeg · merge-mined',  style: 'dashed' },
-  { from: 'btc', to: 'citrea',   kind: 'BitVM bridge',          style: 'cryptographic' },
-  { from: 'btc', to: 'fedi',     kind: 'Federated multisig',    style: 'dashed' },
-  { from: 'btc', to: 'ordinals', kind: 'Embedded witness data', style: 'solid' },
-  // LN gateway connections
-  { from: 'ln', to: 'ark',    kind: 'Lightning Swap',         style: 'dotted', secondary: true },
-  { from: 'ln', to: 'spark',  kind: 'Lightning Swap',         style: 'dotted', secondary: true },
-  { from: 'ln', to: 'rgb',    kind: 'Carries RGB assets', style: 'dotted', secondary: true },
-  { from: 'ln', to: 'liquid', kind: 'Lightning Swap',         style: 'dotted', secondary: true },
-  { from: 'ln', to: 'rsk',    kind: 'Lightning Swap',         style: 'dotted', secondary: true },
-  { from: 'ln', to: 'citrea', kind: 'Lightning Swap',         style: 'dotted', secondary: true },
-  { from: 'ln', to: 'fedi',   kind: 'Lightning gateway',  style: 'dotted', secondary: true },
+  { from: 'btc', to: 'liquid',   kind: 'btc_liquid',   style: 'dashed' },
+  { from: 'btc', to: 'rsk',      kind: 'btc_rsk',      style: 'dashed' },
+  { from: 'btc', to: 'citrea',   kind: 'btc_citrea',   style: 'cryptographic' },
+  { from: 'btc', to: 'fedi',     kind: 'btc_fedi',     style: 'dashed' },
+  { from: 'btc', to: 'ordinals', kind: 'btc_ordinals', style: 'solid' },
+  // LN connections
+  { from: 'ln', to: 'ark',    kind: 'ln_swap', style: 'dotted', secondary: true },
+  { from: 'ln', to: 'spark',  kind: 'ln_swap', style: 'dotted', secondary: true },
+  { from: 'ln', to: 'rgb',    kind: 'ln_rgb',  style: 'dotted', secondary: true },
+  { from: 'ln', to: 'liquid', kind: 'ln_swap', style: 'dotted', secondary: true },
+  { from: 'ln', to: 'rsk',    kind: 'ln_swap', style: 'dotted', secondary: true },
+  { from: 'ln', to: 'citrea', kind: 'ln_swap', style: 'dotted', secondary: true },
+  { from: 'ln', to: 'fedi',   kind: 'ln_fedi', style: 'dotted', secondary: true },
   // L1.5 cross
-  { from: 'bitvm', to: 'citrea', kind: 'Verifies rollup state', style: 'cryptographic', secondary: true },
+  { from: 'bitvm', to: 'citrea', kind: 'bitvm_citrea', style: 'cryptographic', secondary: true },
 ];
 
 export const TIERS: Tier[] = [
