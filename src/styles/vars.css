@@ -15,7 +15,7 @@
   --fg-dimmer:  light-dark(hsl(0, 0%, 55%), hsl(0, 0%, 44%));
   --btc: #f7931a;
   --cat-channel:     light-dark(oklch(0.45 0.15 230), oklch(0.74 0.13 230));
-  --cat-lightning:   light-dark(#727272,               oklch(0.82 0.17 95));
+  --cat-lightning:   light-dark(#00d6c9,               oklch(0.82 0.17 95));
   --cat-sidechain:   light-dark(oklch(0.45 0.15 150), oklch(0.76 0.13 150));
   --cat-rollup:      light-dark(oklch(0.42 0.22 25),  oklch(0.66 0.20 25));
   --cat-client:      light-dark(oklch(0.46 0.16 340), oklch(0.72 0.14 340));
