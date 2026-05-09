@@ -30,7 +30,7 @@ export const EDGES: Edge[] = [
   // L1 → L1.5
   { from: 'btc', to: 'ln',       kind: 'HTLC channel peg',      style: 'solid' },
   { from: 'btc', to: 'ark',      kind: 'Shared UTXO round',     style: 'solid' },
-  { from: 'btc', to: 'spark',    kind: 'Lightning funding tx',  style: 'solid' },
+  { from: 'btc', to: 'spark',    kind: 'Shared private key',  style: 'solid' },
   { from: 'btc', to: 'rgb',      kind: 'Single-use seal',       style: 'solid' },
   { from: 'btc', to: 'bitvm',    kind: 'Script primitive',      style: 'cryptographic' },
   // L1 → L2
@@ -40,13 +40,13 @@ export const EDGES: Edge[] = [
   { from: 'btc', to: 'fedi',     kind: 'Federated multisig',    style: 'dashed' },
   { from: 'btc', to: 'ordinals', kind: 'Embedded witness data', style: 'solid' },
   // LN gateway connections
-  { from: 'ln', to: 'ark',    kind: 'LN gateway',         style: 'dotted', secondary: true },
-  { from: 'ln', to: 'spark',  kind: 'LN gateway',         style: 'dotted', secondary: true },
+  { from: 'ln', to: 'ark',    kind: 'Lightning Swap',         style: 'dotted', secondary: true },
+  { from: 'ln', to: 'spark',  kind: 'Lightning Swap',         style: 'dotted', secondary: true },
   { from: 'ln', to: 'rgb',    kind: 'Carries RGB assets', style: 'dotted', secondary: true },
-  { from: 'ln', to: 'liquid', kind: 'LN gateway',         style: 'dotted', secondary: true },
-  { from: 'ln', to: 'rsk',    kind: 'LN gateway',         style: 'dotted', secondary: true },
-  { from: 'ln', to: 'citrea', kind: 'LN gateway',         style: 'dotted', secondary: true },
-  { from: 'ln', to: 'fedi',   kind: 'LN in/out gateway',  style: 'dotted', secondary: true },
+  { from: 'ln', to: 'liquid', kind: 'Lightning Swap',         style: 'dotted', secondary: true },
+  { from: 'ln', to: 'rsk',    kind: 'Lightning Swap',         style: 'dotted', secondary: true },
+  { from: 'ln', to: 'citrea', kind: 'Lightning Swap',         style: 'dotted', secondary: true },
+  { from: 'ln', to: 'fedi',   kind: 'Lightning gateway',  style: 'dotted', secondary: true },
   // L1.5 cross
   { from: 'bitvm', to: 'citrea', kind: 'Verifies rollup state', style: 'cryptographic', secondary: true },
 ];
