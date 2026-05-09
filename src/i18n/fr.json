@@ -25,10 +25,10 @@
   "roleLabel": "Rôle",
   "consensusLabel": "Consensus",
   "bridgeLabel": "Bridge",
-  "l1Tag": "Layer 1 · Settlement",
+  "l1Tag": "Couche 1 · Règlement",
   "tierLabels": {
     "2": "Sidechains,<br> Rollups &amp; Mints",
-    "15": "Primitives Native",
+    "15": "Primitives Natives",
     "ln": "Lightning Network",
     "1": "Bitcoin"
   },
@@ -39,5 +39,21 @@
     "client":      "Validation côté client",
     "ecash":       "Mint de Chaum / E-Cash",
     "inscription": "Inscription on-chain"
+  },
+  "edges": {
+    "btc_ln":       "Peg via canal HTLC",
+    "btc_ark":      "Round UTXO partagé",
+    "btc_spark":    "Clé privée partagée",
+    "btc_rgb":      "Sceau à usage unique",
+    "btc_bitvm":    "Primitive de script",
+    "btc_liquid":   "Peg fédéré (11/15)",
+    "btc_rsk":      "PowPeg · merge-miné",
+    "btc_citrea":   "Bridge BitVM",
+    "btc_fedi":     "Multisig fédéré",
+    "btc_ordinals": "Données witness embarquées",
+    "ln_swap":      "Swap Lightning",
+    "ln_rgb":       "Transporte les actifs RGB",
+    "ln_fedi":      "Passerelle Lightning",
+    "bitvm_citrea": "Vérifie l'état du rollup"
   }
 }
