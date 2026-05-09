@@ -1,7 +1,7 @@
 /* CSS variables, base reset, body font */
 :root {
   color-scheme: light dark;
-  --light--background: #ffffff;
+  --light--background: #f0f0f0;
   --dark--background:  hsla(0, 0%, 10%, 1);
   --light--text:       hsla(0, 0%, 10%, 1);
   --dark--text:        #ffffff;
