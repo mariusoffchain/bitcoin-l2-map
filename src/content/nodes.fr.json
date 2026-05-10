@@ -18,7 +18,7 @@
     "tagline": "Paiements off-chain, règlement on-chain.",
     "consensus": "Canaux bilatéraux · HTLCs · routage en oignon",
     "bridge": "Natif - financé par un UTXO multisig on-chain",
-    "body": "Lightning permet d'échanger de la valeur sans diffuser chaque paiement, en ne réglant que le résultat net de la balance de ses canaux sur Bitcoin. La confiance est minimisée : chaque partie peut fermer un canal unilatéralement et récupérer ses fonds sur la couche 1 sans permission.",
+    "body": "Lightning permet d'effectuer des paiements en satoshi sans diffuser chaque transaction, en ne réglant que le résultat net de la balance de ses canaux sur Bitcoin. La confiance est minimisée : chaque partie peut fermer un canal unilatéralement et récupérer ses fonds sur la couche 1 sans permission.",
     "bridgePath": [
       "BTC UTXO",
       "transaction de financement 2-sur-2",
