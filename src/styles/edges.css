@@ -23,5 +23,5 @@
 .app.has-active .edge-label.highlighted { opacity: 1; fill: var(--cat, var(--fg-dim)); }
 
 @media (prefers-color-scheme: light) {
-  .app.has-active .edge-label.ln.highlighted { fill: #e88400; }
+  .app.has-active .edge-label.ln.highlighted { fill: #1a1a1a; }
 }
