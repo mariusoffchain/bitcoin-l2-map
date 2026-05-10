@@ -18,7 +18,7 @@
     "tagline": "Off-chain payments, on-chain settlement.",
     "consensus": "Bilateral payment channels · HTLCs · onion routing",
     "bridge": "Native - funded by on-chain multisig UTXO",
-    "body": "Lightning moves value between parties without broadcasting each payment, settling only the net result back to Bitcoin. Trust is minimized: either counterparty can unilaterally close a channel and reclaim funds on L1 without permission.",
+    "body": "Lightning allows parties to make payments in satoshis without broadcasting each transaction, settling only the net result back to Bitcoin. Trust is minimized: either counterparty can unilaterally close a channel and reclaim funds on L1 without permission.",
     "bridgePath": [
       "BTC UTXO",
       "2-of-2 Funding Tx",
