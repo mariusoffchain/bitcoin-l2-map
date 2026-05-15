@@ -89,6 +89,10 @@
 }
 .node.btc:hover .node-core { transform: none; }
 
+.node.ln {
+  z-index: 2;
+}
+
 /* Dim inactive nodes when one is selected */
 .app.has-active .node:not(.active):not(.related) { opacity: 0.22; }
 .app.has-active .node.related .node-core { border-color: var(--cat, var(--line-strong)); }
