@@ -2,7 +2,7 @@
   {
     "id": "btc",
     "name": "Bitcoin",
-    "learnMore": "https://offchain.media/fr/article/quest-ce-que-bitcoin-monnaie-numerique-concurrence-banques-centrales",
+    "learnMore": "https://offchain.media/fr/article/quest-ce-que-bitcoin",
     "short": "Couche de base. Preuve de Travail. Règlement définitif.",
     "tagline": "Le registre sur lequel tout repose.",
     "consensus": "Nakamoto · Preuve de travail (SHA-256)",
