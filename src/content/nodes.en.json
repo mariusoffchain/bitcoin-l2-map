@@ -2,7 +2,7 @@
   {
     "id": "btc",
     "name": "Bitcoin",
-    "learnMore": "https://offchain.media/article/what-bitcoin-digital-currency-competing-central-banks",
+    "learnMore": "https://offchain.media/article/what-bitcoin-digital-currency-challengin-gold-central-banks",
     "short": "Base layer. Proof-of-work. Final settlement.",
     "tagline": "The ledger everything else anchors to.",
     "consensus": "Nakamoto · Proof-of-Work (SHA-256)",
