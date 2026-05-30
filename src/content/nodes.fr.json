@@ -13,7 +13,7 @@
   {
     "id": "ln",
     "name": "Lightning",
-    "learnMore": "https://offchain.media/fr/article/what-is-lightning-network-bitcoin",
+    "learnMore": "https://offchain.media/fr/article/quest-ce-que-lightning-network-bitcoin",
     "short": "Canaux de paiement pour des transactions BTC instantanées et peu coûteuses.",
     "tagline": "Paiements off-chain, règlement on-chain.",
     "consensus": "Canaux bilatéraux · HTLCs · routage en oignon",
