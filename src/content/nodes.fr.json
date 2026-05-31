@@ -61,7 +61,7 @@
   {
     "id": "ark",
     "name": "Ark",
-    "learnMore": "https://offchain.media/fr/article/protocole-ark-piece-manquante-bitcoin-monnaie-quotidien-grande-echelle",
+    "learnMore": "https://offchain.media/fr/article/quest-ce-que-ark-bitcoin",
     "short": "Protocole de UTXO partagés pour des paiements instantanés.",
     "tagline": "Un UTXO virtuel dans une transaction collective.",
     "consensus": "Rounds coordonnés par ASP · arbre d'outputs partagés",
