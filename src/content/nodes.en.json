@@ -61,7 +61,7 @@
   {
     "id": "ark",
     "name": "Ark",
-    "learnMore": "https://offchain.media/article/what-ark-protocol-missing-piece-make-bitcoin-scalable-everyday-currency",
+    "learnMore": "https://offchain.media/article/what-is-ark-bitcoin",
     "short": "Shared UTXO protocol for instant BTC.",
     "tagline": "A virtual UTXO inside a communal round.",
     "consensus": "ASP-coordinated rounds · shared output tree",
