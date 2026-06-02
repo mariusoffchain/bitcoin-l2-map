@@ -109,7 +109,7 @@
   {
     "id": "spark",
     "name": "Spark",
-    "learnMore": "https://offchain.media/article/spark-protocol-bitcoin-layer2-simplifies-btc-ownership-significant-trade-offs",
+    "learnMore": "https://offchain.media/article/what-is-spark-bitcoin",
     "short": "Abstracted Lightning balance for instant BTC payments.",
     "tagline": "A managed Lightning balance inside a shared liquidity pool.",
     "consensus": "Service-provider coordinated liquidity · Lightning routing",
