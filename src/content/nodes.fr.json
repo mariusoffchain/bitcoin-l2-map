@@ -109,7 +109,7 @@
   {
     "id": "spark",
     "name": "Spark",
-    "learnMore": "https://offchain.media/fr/article/protocole-spark-layer-2-bitcoin-simplifie-detention-btc-compromis-importants",
+    "learnMore": "https://offchain.media/fr/article/quest-ce-que-spark-bitcoin",
     "short": "Solde Lightning abstrait pour paiements instantanés.",
     "tagline": "Un solde Lightning géré dans un pool de liquidité partagé.",
     "consensus": "Liquidité coordonnée par un fournisseur · routage Lightning",
